@@ -8,17 +8,29 @@
 
 <h1>Iniciar sesión</h1>
 
-<form action="login.php" method="POST">
+<form id="formLogin" action="login.php" method="POST">
     <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
+    <input type="email" name="email" id="email"><br><br>
 
     <label>Contraseña:</label><br>
-    <input type="password" name="password" required><br><br>
+    <input type="password" name="password" id="password"><br><br>
 
-    <button type="submit">Entrar</button>
+    <button type="submit">Iniciar sesión</button>
 </form>
 
 <p><a href="register.html">Registrarse</a></p>
+
+<script>
+document.getElementById("formLogin").addEventListener("submit", function(event) {
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (email === "" || password === "") {
+        alert("Debes rellenar todos los campos antes de iniciar sesión.");
+        event.preventDefault();
+    }
+});
+</script>
 
 </body>
 </html>
