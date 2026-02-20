@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Registro de usuario</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{font-family:system-ui,Arial;max-width:560px;margin:30px auto;padding:0 12px}
+    form{border:1px solid #ddd;padding:16px;border-radius:8px}
+    label{display:block;margin:8px 0 4px}
+    input{width:100%;padding:8px;border:1px solid #ccc;border-radius:6px}
+    button{margin-top:12px;padding:10px 14px;border:0;border-radius:8px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <h2>Crear cuenta</h2>
+  <form method="POST" action="register.php" novalidate>
+    <label>Nombre</label>
+    <input type="text" name="nombre" required>
+
+    <label>Apellidos</label>
+    <input type="text" name="apellidos" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Contraseña</label>
+    <input type="password" name="password" required minlength="6">
+
+    <label>Repite la contraseña</label>
+    <input type="password" name="password2" required minlength="6">
+
+    <button type="submit">Registrarme</button>
+  </form>
+  <p><a href="/main.php">Volver a la principal</a></p>
+</body>
+</html>
