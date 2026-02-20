@@ -43,6 +43,9 @@ $usuario = $_SESSION['usuario'] ?? null;
 </head>
 <body>
 
+<p><a href="main.php">Volver a la página principal</a></p>
+
+
 <h1><?= htmlspecialchars($libro['titulo']) ?></h1>
 
 <p><strong>Autor:</strong> <?= htmlspecialchars($libro['autor']) ?></p>
@@ -78,7 +81,10 @@ $usuario = $_SESSION['usuario'] ?? null;
     <button type="submit">Enviar comentario</button>
 </form>
 
-<p><a href="main.php">Volver a la página principal</a></p>
+<?php if ($usuario): ?>
+    <p><a href="logout.php">Cerrar sesión</a></p>
+<?php endif; ?>
+
 
 </body>
 </html>

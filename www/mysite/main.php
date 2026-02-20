@@ -16,12 +16,14 @@ $usuario = $_SESSION['usuario'] ?? null;
 
 <?php if ($usuario): ?>
     <p>Hola, <strong><?= htmlspecialchars($usuario['nombre']) ?></strong>. Has iniciado sesión correctamente.</p>
-    <p><a href="logout.php">Cerrar sesión</a></p>
 <?php else: ?>
     <p>No has iniciado sesión.</p>
     <p><a href="login.html">Iniciar sesión</a></p>
     <p><a href="register.html">Registrarse</a></p>
 <?php endif; ?>
 
+<p><a href="index.php">Ver libros</a></p>
+
+<p><a href="logout.php">Cerrar sesión</a></p>
 </body>
 </html>
