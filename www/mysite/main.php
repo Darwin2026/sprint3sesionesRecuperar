@@ -78,6 +78,7 @@ $usuario = $_SESSION['usuario'] ?? null;
         <li><a href="register.html">Registrarse</a></li>
     <?php else: ?>
         <li><a href="logout.php">Cerrar sesión</a></li>
+	<li><a href="change_password.html">Cambiar Contraseña</a></li>
     <?php endif; ?>
 </ul>
 
