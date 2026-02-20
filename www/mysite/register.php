@@ -79,5 +79,5 @@ $ins->execute([
 ]);
 
 // ---- Redirigir a la principal si todo OK ----
-header('Location: /main.php');  // o "Location: http://localhost:8085/main.php"
+header('Location: main.php');  // o "Location: http://localhost:8084/main.php"
 exit;
